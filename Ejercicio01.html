@@ -1,0 +1,39 @@
+
+<canvas id='tablero'  width=800 height = 650></canvas>
+<script>
+  function triangulo(cd,colorBorde,colorRelleno,grosor)
+{ 
+  ctx.beginPath();
+  ctx.strokeStyle= colorBorde;
+  ctx.fillStyle= colorRelleno;
+  ctx.linewidth =grosor;
+  ctx.moveTo(cd[0],cd[1]);
+  ctx.lineTo(cd[2],cd[3]);
+  ctx.lineTo(cd[4],cd[5]);
+  ctx.closePath();
+  ctx.stroke();
+  ctx.fill();
+} 
+  var c=document.getElementById('tablero')
+  var ctx = c.getContext('2d')
+ 
+  triangulo([118,14,392,165,132,299],'rgba(255,127,39)','rgba(195,195,195)');
+
+if (ctx) {
+				
+				// dibujamos y rellenamos un rectángulo
+				ctx.fillStyle = "#b00"; 
+				ctx.fillRect(100,75,110,60);
+				}
+
+/*Para esta situacion se debe tener en cuenta el # y el número de mezcla con un valor RGB Hexadecimal en triada,
+el número entero 255 representa el 100%, y F o FF en notación hexadecimal*/
+ </script> 
+
+
+
+
+
+
+
+
